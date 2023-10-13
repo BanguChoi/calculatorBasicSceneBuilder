@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" 
+fx:controller="calculatorBasicJava.Controller">
+   <children>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #BDBDBD;">
+         <children>
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="수식" textAlignment="CENTER">
+               <font>
+                  <Font name="Hancom Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="func" prefHeight="25.0" prefWidth="90.0" text="" />
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="결과" textAlignment="CENTER">
+               <font>
+                  <Font name="Hancom Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="result" prefHeight="25.0" prefWidth="90.0" text="0"/>
+         </children>
+      </HBox>
+      <GridPane alignment="CENTER" prefHeight="250.0" prefWidth="300.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="0" textAlignment="CENTER" onAction ="#operand">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="1" textAlignment="CENTER" GridPane.columnIndex="1" onAction ="#operand">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="2" textAlignment="CENTER" GridPane.columnIndex="2" onAction ="#operand">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="3" textAlignment="CENTER" GridPane.columnIndex="3" onAction ="#operand">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="4" textAlignment="CENTER" GridPane.rowIndex="1" onAction ="#operand">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction ="#operand">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction ="#operand">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="7" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" onAction ="#operand">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="8" GridPane.rowIndex="2" onAction ="#operand">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="9" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction ="#operand">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="CE" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2" onAction="#operator">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="계산" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" onAction="#operator">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #A9D0F5; -fx-border-color: black;" text="+" textAlignment="CENTER" GridPane.rowIndex="3" onAction ="#operator">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #A9D0F5; -fx-border-color: black;" text="-" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" onAction ="#operator">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #A9D0F5; -fx-border-color: black;" text="*" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3" onAction ="#operator">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #A9D0F5; -fx-border-color: black;" text="/" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3" onAction ="#operator">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Hancom Gothic Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </GridPane>
+   </children>
+</VBox>
